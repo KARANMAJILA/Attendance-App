@@ -57,42 +57,7 @@ backend/
 ├── alembic/ (DB migrations)
 └── requirements.txt
 
-1. **Install dependencies**
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-Set environment variables (create .env)
 
-ini
-Copy
-Edit
-DATABASE_URL=your_postgres_url
-SECRET_KEY=your_jwt_secret_key
-Run migrations
-
-bash
-Copy
-Edit
-alembic upgrade head
-Start FastAPI server
-
-bash
-Copy
-Edit
-uvicorn app.main:app --reload
-📱 Frontend
-Install dependencies
-
-bash
-Copy
-Edit
-npm install
-Run the app
-
-bash
-Copy
-Edit
-npx expo start
 🧪 API Endpoints (FastAPI)
 Method	Endpoint	Description
 POST	/register	Register user
@@ -102,39 +67,7 @@ POST	/attendance/mark	Mark attendance via face
 GET	/attendance/all	Admin: all attendance logs
 
 
-🛡️ Security
-All protected routes use:
 
-python
-Copy
-Edit
-Depends(get_current_user)
-Admin-only access with:
-
-python
-Copy
-Edit
-if not current_user.is_admin: raise HTTPException(...)
-📦 Deployment
-Backend
-Deploy on Render, Railway, or EC2
-
-Set CORS and expose port 8000
-
-Frontend
-Build APK:
-
-bash
-Copy
-Edit
-npx expo build:android
-Or eject & build native:
-
-bash
-Copy
-Edit
-npx expo eject
-cd android && ./gradlew assembleRelease
 📸 Face Recognition
 Face image upload by admin (base64 or URL)
 
