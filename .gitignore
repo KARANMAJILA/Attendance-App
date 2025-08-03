@@ -1,0 +1,35 @@
+# Backend (Python/FastAPI)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+uploads/
+backend/**/__pycache__/
+
+# Frontend (React Native/Expo)
+staff-attendance-tracker/node_modules/
+staff-attendance-tracker/.expo/
+staff-attendance-tracker/dist/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Environment & Local
+.env*
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Dependencies
+**/node_modules/
+yarn.lock
+package-lock.json
+
+# Build outputs
+dist/
+build/
